@@ -19,3 +19,12 @@ export interface RestaurantInterfaceResponse {
     per_page: number;
   };
 }
+
+export const defaultRestaurants = {
+  data: [],
+  success: false,
+  pagination: {
+    total: 0,
+    per_page: 0,
+  },
+};
