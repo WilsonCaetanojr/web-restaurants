@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 import { Container, Logo, TextRigth } from "./style";
-import LogoGetIn from "../../../assets/logoGetIn.png";
+import EasyFood from "../../../assets/easyFood.png";
 
 export const TitleHeader = () => {
   return (
     <Container>
-      <Logo src={LogoGetIn} alt="Logo Get>In" />
+      <Logo src={EasyFood} alt="Logo da Easy Food" />
       <TextRigth>
         <h1>Descubra novos sabores</h1>
 
