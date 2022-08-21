@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+
 import { useInfiniteQuery } from "react-query";
 import { ContainerCardRestaurant } from "../molecules/ContainerCardRestaurant/ContainerCardRestaurant";
 import { HeaderHome } from "../molecules/HeaderHome/HeaderHome";
@@ -16,7 +17,6 @@ interface ScrollingElement {
 
 const limitPerPage = 10;
 export const HomeRestaurants = () => {
-  const [searchText, setSearchText] = useState("Restaurante X");
   const { loading, setLoading } = useContext(GlobalContext);
 
   const { data, hasNextPage, fetchNextPage } = useInfiniteQuery(
@@ -65,7 +65,7 @@ export const HomeRestaurants = () => {
     <>
       {loading && <LoadingSpinner />}
       <HeaderHome />
-      <ContainerCardRestaurant restaurants={data} searchText={searchText} />
+      <ContainerCardRestaurant restaurants={data} />
     </>
   );
 };

@@ -13,7 +13,11 @@ export const ContentSearch = ({ searchText }: { searchText: string }) => {
         {!!(searchText && width > parseInt(theme.screens.mobile)) && (
           <SearchTextRight>
             <label>Resultados para</label>
-            <h4>{searchText}</h4>
+            <h4>
+              {`${searchText.substring(0, 16)}${
+                searchText.length > 16 ? "..." : ""
+              }`}
+            </h4>
           </SearchTextRight>
         )}
       </Container>

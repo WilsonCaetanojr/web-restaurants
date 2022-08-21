@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { GlobalContext } from "../../../contexts/GlobalContex";
 import { theme } from "../../../libs/styledComponents";
 import { RestaurantInterface } from "../../../repositories/restaurant/restaurantInterface";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
@@ -15,18 +17,21 @@ interface Props {
         }[];
       }
     | undefined;
-
-  searchText: string;
 }
 
-export const ContainerCardRestaurant = ({ restaurants, searchText }: Props) => {
+export const ContainerCardRestaurant = ({ restaurants }: Props) => {
   const { width } = useWindowDimensions();
+  const { searchText, setSearchText } = useContext(GlobalContext);
 
   return (
     <Container>
       {width <= parseInt(theme.screens.mobile) && (
         <InputArea>
-          <InputSearch placeholder="Encontre um restaurante" />
+          <InputSearch
+            value={searchText}
+            setValue={setSearchText}
+            placeholder="Encontre um restaurante"
+          />
         </InputArea>
       )}
 
