@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import Image from "next/image";
+import css from "styled-jsx/css";
 
 export const Header = styled.div<{ image: string }>`
   display: flex;
@@ -35,4 +37,80 @@ export const BoderBottom = styled.div`
   border-radius: 32px 32px 0px 0px;
   height: 32px;
   width: 100%;
+`;
+
+export const ContainerTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 0px 100px;
+  height: 101px;
+
+  @media (max-width: 750px) {
+    padding: 0px 20px;
+  }
+
+  @media (max-width: 550px) {
+    padding: 0px 0px;
+  }
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+`;
+
+export const LogoEasyFood = styled(Image)`
+  min-width: 87px !important;
+  max-width: 87px !important;
+  min-height: 34px !important;
+  max-height: 34px !important;
+
+  cursor: pointer;
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    display: none !important;
+  }
+`;
+
+export const TextArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: ${(props) => props.theme.sizes["8"]};
+    line-height: 140%;
+    text-align: right;
+    color: ${(props) => props.theme.colors.darkDown};
+  }
+
+  label {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: ${(props) => props.theme.sizes["5"]};
+    line-height: 140%;
+    text-align: right;
+    color: ${(props) => props.theme.colors.darkDown};
+  }
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    align-items: flex-start;
+
+    h1 {
+      font-size: ${(props) => props.theme.sizes["6"]};
+      text-align: left;
+      margin-bottom: 20px;
+      width: 250px;
+    }
+
+    label {
+      text-align: left;
+      font-size: ${(props) => props.theme.sizes["4"]};
+    }
+  }
 `;

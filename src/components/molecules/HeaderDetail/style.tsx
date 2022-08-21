@@ -26,42 +26,30 @@ export const WrapperDetails = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
 
-  img {
-    border-radius: 50%;
+export const WrapperContact = styled.div`
+  height: 90px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 
-    min-width: 119px;
-    max-width: 119px;
-    min-height: 119px;
-    max-height: 119px;
+  color: ${(props) => props.theme.colors.white};
 
-    border: ${(props) => props.theme.colors.white} solid 1px !important;
-    padding: 5px !important;
+  h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: ${(props) => props.theme.sizes["8"]};
+    line-height: 140%;
   }
 
-  div {
-    height: 90px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-
-    color: ${(props) => props.theme.colors.white};
-
-    h1 {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 700;
-      font-size: ${(props) => props.theme.sizes["8"]};
-      line-height: 140%;
-    }
-
-    h6 {
-      font-family: "Poppins";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 0.875rem;
-      line-height: 21px;
-    }
+  h6 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 21px;
   }
 `;
 
@@ -114,18 +102,9 @@ export const BoderBottom = styled.div`
 
   display: flex;
   justify-content: center;
-`;
 
-export const ImageMobile = styled.div<{ image: string }>`
-  width: 119px;
-  height: 119px;
-
-  position: absolute;
-  top: 60px;
-
-  background: url(${(props) => props.image}) no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-  border: ${(props) => props.theme.colors.white} solid 1px !important;
+  div {
+    position: absolute;
+    top: 60px;
+  }
 `;

@@ -6,12 +6,13 @@ import {
   WrapperDetails,
   Goback,
   BoderBottom,
-  ImageMobile,
+  WrapperContact,
 } from "./style";
 import GobackIcon from "../../../assets/gobackIcon.png";
 import { maskTelephone } from "../../../utils/mask/telephone";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 import { theme } from "../../../libs/styledComponents";
+import { LogoRestaurant } from "../../atoms/LogoRestaurant/LogoRestaurant";
 
 export const HeaderDetail = ({
   name,
@@ -42,24 +43,19 @@ export const HeaderDetail = ({
 
       {width > widthMobile ? (
         <WrapperDetails>
-          <Image
-            width={120}
-            height={120}
-            src={logo}
-            alt="Logo do restaurante"
-          />
+          <LogoRestaurant logo={logo} />
 
-          <div>
+          <WrapperContact>
             <h1>{name}</h1>
 
             <h6>{maskTelephone(telephone)}</h6>
             <h6>{website}</h6>
-          </div>
+          </WrapperContact>
         </WrapperDetails>
       ) : (
         <>
           <BoderBottom>
-            <ImageMobile image={logo} />
+            <LogoRestaurant logo={logo} />
           </BoderBottom>
         </>
       )}
