@@ -15,11 +15,11 @@ export const DetailRestaurant = () => {
   const { data, isLoading, isError } = useQuery(
     ["restaurant", id],
     async () => {
-      return await getRestaurantById({ id });
+      return id?.toString()
+        ? await getRestaurantById(id?.toString())
+        : defaultRestaurantById;
     }
   );
-
-  console.log({ id });
 
   return (
     <>

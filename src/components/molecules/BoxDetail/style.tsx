@@ -2,21 +2,28 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin-top: 30px;
+  padding-bottom: 100px;
   width: 100%;
   max-width: 600px;
-  /* display: block; */
-  /* box-sizing: border-box; */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
   text-align: justify;
   text-justify: inter-word;
+
+  h1 {
+    text-align: center;
+    margin-top: -25px;
+  }
+
+  div {
+    padding: 0px 16px;
+  }
 
   h6 {
     font-style: normal;
     line-height: 140%;
     margin-top: 20px;
+    margin-bottom: 3px;
     color: ${(props) => props.theme.colors.darkDown};
   }
 
@@ -28,6 +35,20 @@ export const Container = styled.div`
     line-height: 24px;
     color: ${(props) => props.theme.colors.darkUp};
   }
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    div {
+      padding: 0px 30px;
+    }
+
+    h6 {
+      margin-top: 30px;
+    }
+    h5 {
+      font-size: 0.875rem;
+      line-height: 21px;
+    }
+  }
 `;
 
 export const Description = styled.label`
@@ -38,6 +59,11 @@ export const Description = styled.label`
   line-height: 33px;
 
   color: #676666;
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    font-size: 0.875rem;
+    line-height: 21px;
+  }
 `;
 
 export const Line = styled.hr`

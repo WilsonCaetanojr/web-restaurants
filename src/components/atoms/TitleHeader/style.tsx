@@ -46,7 +46,7 @@ export const TextArea = styled.div`
     font-size: ${(props) => props.theme.sizes["5"]};
     line-height: 140%;
     text-align: right;
-    color: ${(props) => props.theme.colors.darkUp};
+    color: ${(props) => props.theme.colors.darkDown};
   }
 
   @media (max-width: ${(props) => props.theme.screens.mobile}) {

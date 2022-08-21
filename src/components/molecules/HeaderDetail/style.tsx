@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 export const Header = styled.div<{ image: string }>`
@@ -15,6 +16,10 @@ export const Header = styled.div<{ image: string }>`
   padding: 0;
   top: 0;
   left: 0;
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    justify-content: space-between;
+  }
 `;
 
 export const WrapperDetails = styled.div`
@@ -92,5 +97,35 @@ export const Goback = styled.div`
       margin-right: 10px;
       cursor: pointer;
     }
+
+    @media (max-width: ${(props) => props.theme.screens.mobile}) {
+      margin-top: 60px;
+    }
   }
+`;
+
+export const BoderBottom = styled.div`
+  background-color: ${(props) => props.theme.colors.white};
+  box-shadow: 0px -20px 20px 0px rgb(0 0 0 / 15%);
+  border-radius: 32px 32px 0px 0px;
+  height: 32px;
+  width: 100%;
+  margin: 0px;
+
+  display: flex;
+  justify-content: center;
+`;
+
+export const ImageMobile = styled.div<{ image: string }>`
+  width: 119px;
+  height: 119px;
+
+  position: absolute;
+  top: 60px;
+
+  background: url(${(props) => props.image}) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: ${(props) => props.theme.colors.white} solid 1px !important;
 `;

@@ -13,11 +13,7 @@ export const getAllRestaurants = async (pageParam: number, limit: number) => {
   return data as RestaurantsInterfaceResponse;
 };
 
-export const getRestaurantById = async ({
-  id,
-}: {
-  id: string | string[] | undefined;
-}) => {
+export const getRestaurantById = async (id: string) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/v1/restaurants/${id}`
   );
