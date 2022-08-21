@@ -54,6 +54,10 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+
+    #__next {
+      background-color: #FFFFFF;
+    }
 `;
 
 export const theme = {
@@ -62,7 +66,7 @@ export const theme = {
     darkDown: "#333333",
     dark: "#666666",
     darkUp: "#808080",
-    white: "#ffffff",
+    white: "#FFFFFF",
     lightDown: "#aaaaaa",
     light: "#cccccc",
     lightMedium: "#E6E6E6",
@@ -81,5 +85,8 @@ export const theme = {
     "9": "2.25rem",
     "10": "2.5rem",
     "40": "10rem",
+  },
+  screens: {
+    mobile: "500px",
   },
 };

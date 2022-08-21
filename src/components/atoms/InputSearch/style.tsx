@@ -9,11 +9,11 @@ export const ContainerInput = styled.div`
   border: 1px solid ${(props) => props.theme.colors.lightMedium};
   border-radius: 8px;
   box-sizing: border-box;
-  width: 540px;
+  width: 100%;
   height: 50px;
 
   input {
-    width: 510px;
+    width: 90%;
     height: 100%;
     border: none;
     outline: none;

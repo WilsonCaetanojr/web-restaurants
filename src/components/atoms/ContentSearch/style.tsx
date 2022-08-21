@@ -14,6 +14,14 @@ export const Container = styled.div`
     font-size: ${(props) => props.theme.sizes["6"]};
     line-height: 140%;
   }
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    margin: 30px 0px 15px 0px;
+
+    h2 {
+      font-size: 0.938rem;
+    }
+  }
 `;
 
 export const SearchTextRight = styled.div`

@@ -4,16 +4,19 @@ export const Container = styled.div`
   max-width: 900px;
   margin: 0 auto;
   padding: 0 16px 0 16px;
-  justify-content: center;
+
+  @media (max-width: ${(props) => props.theme.screens.mobile}) {
+    padding: 0 30px 0 30px;
+  }
 `;
 
 export const ContainerCard = styled.div`
   max-width: 100%;
   margin-bottom: 100px;
   display: grid;
-  gap: ${(props) => props.theme.sizes["4"]};
-
-  justify-content: center;
+  row-gap: ${(props) => props.theme.sizes["5"]};
+  column-gap: ${(props) => props.theme.sizes["5"]};
+  grid-template-columns: repeat(1, 1fr);
 
   @media (min-width: 350px) {
     grid-template-columns: repeat(2, 1fr);
@@ -27,4 +30,10 @@ export const TitleStyled = styled.h2`
   font-size: ${(props) => props.theme.sizes["6"]};
   line-height: 140%;
   color: ${(props) => props.theme.colors.darkDown};
+`;
+
+export const InputArea = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;

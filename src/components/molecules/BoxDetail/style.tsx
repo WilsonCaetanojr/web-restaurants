@@ -26,7 +26,7 @@ export const Container = styled.div`
     font-weight: 400;
     font-size: ${(props) => props.theme.sizes["4"]};
     line-height: 24px;
-    color: #808080;
+    color: ${(props) => props.theme.colors.darkUp};
   }
 `;
 
@@ -45,5 +45,5 @@ export const Line = styled.hr`
   text-align: left;
   margin: 30px 0 30px 0px;
 
-  border: 1px solid #cccccc;
+  border: 1px solid ${(props) => props.theme.colors.light};
 `;

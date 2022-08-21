@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CardStyled = styled.div<{ image: string }>`
+  width: 100%;
   color: ${(props) => props.theme.colors.white};
-  padding: ${(props) => props.theme.sizes["4"]};
   height: ${(props) => props.theme.sizes["40"]};
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -20,6 +20,7 @@ export const CardStyled = styled.div<{ image: string }>`
   }
 
   label {
+    padding: 10px;
     font-weight: 700;
     font-size: ${(props) => props.theme.sizes["3"]};
     color: ${(props) => props.theme.colors.white};
