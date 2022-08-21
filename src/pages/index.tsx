@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 
-import { PreviewRestaurants } from "../components/organisms/PreviewRestaurants";
+import { HomeRestaurants } from "../components/organisms/HomeRestaurants";
 
 const Home: NextPage = () => {
-  return <PreviewRestaurants />;
+  return <HomeRestaurants />;
 };
 
 export default Home;

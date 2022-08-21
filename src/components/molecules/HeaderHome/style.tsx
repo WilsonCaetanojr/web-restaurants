@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.div<{ backgoundImage: string }>`
+export const Header = styled.div<{ image: string }>`
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -8,7 +8,7 @@ export const Header = styled.div<{ backgoundImage: string }>`
   margin: 0;
   width: 100%;
   height: 350px;
-  background: url(${(props) => props.backgoundImage}) no-repeat;
+  background: url(${(props) => props.image}) no-repeat;
   background-size: cover;
   background-position: center;
   padding: 0;

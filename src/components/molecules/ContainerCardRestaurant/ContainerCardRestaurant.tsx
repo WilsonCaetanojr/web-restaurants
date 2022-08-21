@@ -27,7 +27,7 @@ export const ContainerCardRestaurant = ({ restaurants, searchText }: Props) => {
               key={restaurant.id}
               id={restaurant.id}
               title={restaurant.name}
-              backgroundImage={restaurant.image}
+              image={restaurant.image}
             />
           ))
         )}

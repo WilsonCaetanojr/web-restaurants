@@ -11,8 +11,17 @@ export interface RestaurantInterface {
   opening_hours: string;
 }
 
-export interface RestaurantInterfaceResponse {
+export interface RestaurantsInterfaceResponse {
   data: RestaurantInterface[];
+  success: boolean;
+  pagination: {
+    total: number;
+    per_page: number;
+  };
+}
+
+export interface RestaurantsByIdInterfaceResponse {
+  data: RestaurantInterface;
   success: boolean;
   pagination: {
     total: number;
@@ -22,6 +31,26 @@ export interface RestaurantInterfaceResponse {
 
 export const defaultRestaurants = {
   data: [],
+  success: false,
+  pagination: {
+    total: 0,
+    per_page: 0,
+  },
+};
+
+export const defaultRestaurantById = {
+  data: {
+    id: "",
+    name: "",
+    description: "",
+    logo: "",
+    image: "",
+    telephone: "",
+    price_range: "",
+    payment_methods: "",
+    website: "",
+    opening_hours: "",
+  },
   success: false,
   pagination: {
     total: 0,

@@ -1,14 +1,21 @@
+import { useRouter } from "next/router";
 import { CardStyled } from "./style";
 
 interface Props {
   id: string;
   title: string;
-  backgroundImage: string;
+  image: string;
 }
 
-export const CardRestaurant = ({ id, title, backgroundImage }: Props) => {
+export const CardRestaurant = ({ id, title, image }: Props) => {
+  const { push } = useRouter();
+
+  const handleOpenDetail = async () => {
+    await push(`/restaurant/${id}`);
+  };
+
   return (
-    <CardStyled backgroundImage={backgroundImage}>
+    <CardStyled image={image} onClick={() => handleOpenDetail()}>
       <label>{title}</label>
     </CardStyled>
   );

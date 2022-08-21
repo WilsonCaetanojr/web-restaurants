@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const CardStyled = styled.div<{ backgroundImage: string }>`
+export const CardStyled = styled.div<{ image: string }>`
   color: ${(props) => props.theme.colors.white};
   padding: ${(props) => props.theme.sizes["4"]};
   height: ${(props) => props.theme.sizes["40"]};
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${(props) => props.backgroundImage}) no-repeat;
+    url(${(props) => props.image}) no-repeat;
   background-size: cover;
   background-position: center;
 

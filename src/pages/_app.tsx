@@ -13,9 +13,7 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <GlobalProvider>
         <QueryClientProvider client={client}>
-          <React.Suspense fallback="Loading...">
-            <Component {...pageProps} />
-          </React.Suspense>
+          <Component {...pageProps} />
         </QueryClientProvider>
       </GlobalProvider>
     </ThemeProvider>

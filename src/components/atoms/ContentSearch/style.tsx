@@ -11,7 +11,7 @@ export const Container = styled.div`
   h2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: ${(props) => props.theme.sizes["6"]};
     line-height: 140%;
   }
 `;

@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const ContainerCard = styled.div`
   max-width: 100%;
-  margin: 0 auto;
+  margin-bottom: 100px;
   display: grid;
   gap: ${(props) => props.theme.sizes["4"]};
 

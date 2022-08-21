@@ -5,9 +5,9 @@ import { Header, InputArea } from "./style";
 import { TitleHeader } from "../../atoms/TitleHeader/TitleHeader";
 import { InputSearch } from "../../atoms/InputSearch/InputSearch";
 
-export const HeaderRestaurants = () => {
+export const HeaderHome = () => {
   return (
-    <Header backgoundImage={HeaderImage.src}>
+    <Header image={HeaderImage.src}>
       <TitleHeader />
       <InputArea>
         <InputSearch placeholder="Encontre um restaurante" />
