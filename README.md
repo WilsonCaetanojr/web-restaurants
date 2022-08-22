@@ -2,7 +2,7 @@
    <img src="https://i.imgur.com/aufn1QW.png" alt="event-platform" width="350"/>
 </p>
 
-# :sparkles: Project Context:
+# :sparkles: Project Context
 
 Restaurant listing. The easiest way to choose the restaurant. Read restaurant descriptions, place your order.
 
@@ -24,6 +24,7 @@ The technologies used in the project:
 * [Styled Components](https://styled-components.com/)      
 * [Context API](https://pt-br.reactjs.org/docs/context.html)      
 * [React Query](https://react-query-v3.tanstack.com/overview)      
+* [Jest](https://jestjs.io/)      
 
 In this project, the [Data Fetch getServerSideProps (SSR)](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) was not used in the listing, as the focus was given to the React Query lib with [Infinite Scroll](https://react-query-v3.tanstack.com/reference/useInfiniteQuery#_top).
 
