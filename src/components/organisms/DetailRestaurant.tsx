@@ -7,6 +7,8 @@ import { LoadingSpinner } from "../atoms/LoadingSpinner/LoadingSpinner";
 import { BoxDetail } from "../molecules/BoxDetail/BoxDetail";
 import { HeaderDetail } from "../molecules/HeaderDetail/HeaderDetail";
 
+const CACHE_TIME_5_MINUTES = 5 * 60 * 1000;
+
 export const DetailRestaurant = () => {
   const {
     query: { id },
@@ -18,6 +20,9 @@ export const DetailRestaurant = () => {
       return id?.toString()
         ? await getRestaurantById(id?.toString())
         : defaultRestaurantById;
+    },
+    {
+      cacheTime: CACHE_TIME_5_MINUTES,
     }
   );
 
