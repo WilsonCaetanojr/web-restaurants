@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Image from "next/image";
-import css from "styled-jsx/css";
 
 export const Header = styled.div<{ image: string }>`
   display: flex;
@@ -68,10 +67,6 @@ export const LogoEasyFood = styled(Image)`
   max-height: 34px !important;
 
   cursor: pointer;
-
-  @media (max-width: ${(props) => props.theme.screens.mobile}) {
-    display: none !important;
-  }
 `;
 
 export const TextArea = styled.div`
@@ -105,12 +100,21 @@ export const TextArea = styled.div`
       font-size: ${(props) => props.theme.sizes["6"]};
       text-align: left;
       margin-bottom: 20px;
-      width: 250px;
     }
 
     label {
       text-align: left;
       font-size: ${(props) => props.theme.sizes["4"]};
+    }
+  }
+
+  @media (max-width: 320px) {
+    h1 {
+      font-size: ${(props) => props.theme.sizes["4"]};
+    }
+
+    label {
+      font-size: ${(props) => props.theme.sizes["3"]};
     }
   }
 `;

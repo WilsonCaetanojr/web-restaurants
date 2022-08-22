@@ -1,4 +1,4 @@
-import Search from "../../../assets/searchIcon.png";
+import Search from "../../../assets/icons/searchIcon.png";
 import Image from "next/image";
 import { ContainerIcon, ContainerInput } from "./style";
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Backdrop, Spinner } from "./style";
-import LoadingIcon from "../../../assets/loadingIcon.png";
+import LoadingIcon from "../../../assets/icons/loadingIcon.png";
 
 export const LoadingSpinner = () => {
   return (

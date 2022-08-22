@@ -8,7 +8,7 @@ import {
   BoderBottom,
   WrapperContact,
 } from "./style";
-import GobackIcon from "../../../assets/gobackIcon.png";
+import GobackIcon from "../../../assets/icons/backIconRed.png";
 import { maskTelephone } from "../../../utils/mask/telephone";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 import { theme } from "../../../libs/styledComponents";

@@ -37,3 +37,27 @@ export const InputArea = styled.div`
   justify-content: center;
   width: 100%;
 `;
+
+export const WrapperSearchLabel = styled.div`
+  margin: 40px 0 30px 0;
+
+  h5 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 140%;
+
+    text-align: center;
+
+    color: ${(props) => props.theme.colors.lightDown};
+  }
+
+  h2 {
+    line-height: 140%;
+
+    text-align: center;
+
+    /* color: ${(props) => props.theme.colors.lightDown}; */
+  }
+`;

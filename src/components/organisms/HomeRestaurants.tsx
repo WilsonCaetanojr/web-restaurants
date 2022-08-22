@@ -8,6 +8,8 @@ import { getAllRestaurants } from "../../repositories/restaurant/restaurantRepos
 import { GlobalContext } from "../../contexts/GlobalContex";
 import { defaultRestaurants } from "../../repositories/restaurant/restaurantInterface";
 import { LoadingSpinner } from "../atoms/LoadingSpinner/LoadingSpinner";
+import useWindowDimensions from "../../utils/hooks/useWindowDimensions";
+import { theme } from "../../libs/styledComponents";
 
 interface ScrollingElement {
   scrollHeight: number;
@@ -17,7 +19,8 @@ interface ScrollingElement {
 
 const limitPerPage = 10;
 export const HomeRestaurants = () => {
-  const { loading, setLoading } = useContext(GlobalContext);
+  const { loading, setLoading, searchText } = useContext(GlobalContext);
+  const { width } = useWindowDimensions();
 
   const { data, hasNextPage, fetchNextPage } = useInfiniteQuery(
     "restaurants",
@@ -59,12 +62,12 @@ export const HomeRestaurants = () => {
     return () => document.removeEventListener("scroll", onScroll);
   }, [fetchNextPage, hasNextPage, setLoading]);
 
-  // console.log({ data, loading });
-
   return (
     <>
       {loading && <LoadingSpinner />}
-      <HeaderHome />
+      {(!searchText || width > parseInt(theme.screens.mobile)) && (
+        <HeaderHome />
+      )}
       <ContainerCardRestaurant restaurants={data} />
     </>
   );

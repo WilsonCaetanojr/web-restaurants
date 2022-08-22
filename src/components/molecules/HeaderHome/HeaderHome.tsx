@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import Image from "next/image";
 
-import HeaderImage from "../../../assets/headerImage.png";
-import HeaderImageMobile from "../../../assets/headerImageMobile.png";
+import HeaderWeb from "../../../assets/images/headerWeb.png";
+import HeaderMobile from "../../../assets/images/headerMobile.png";
 
 import {
   Header,
@@ -16,7 +15,7 @@ import { InputSearch } from "../../atoms/InputSearch/InputSearch";
 import useWindowDimensions from "../../../utils/hooks/useWindowDimensions";
 import { theme } from "../../../libs/styledComponents";
 import { GlobalContext } from "../../../contexts/GlobalContex";
-import EasyFood from "../../../assets/easyFood.png";
+import EasyFood from "../../../assets/images/easyFood.png";
 
 export const HeaderHome = () => {
   const { width } = useWindowDimensions();
@@ -24,9 +23,7 @@ export const HeaderHome = () => {
 
   const widthMobile = parseInt(theme.screens.mobile);
   return (
-    <Header
-      image={width > widthMobile ? HeaderImage.src : HeaderImageMobile.src}
-    >
+    <Header image={width > widthMobile ? HeaderWeb.src : HeaderMobile.src}>
       <ContainerTitle>
         {width > parseInt(theme.screens.mobile) && (
           <LogoEasyFood
@@ -34,6 +31,7 @@ export const HeaderHome = () => {
             height={34}
             src={EasyFood}
             alt="Logo da Easy Food"
+            onClick={() => setSearchText("")}
           />
         )}
 
