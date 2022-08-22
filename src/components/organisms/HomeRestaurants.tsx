@@ -45,9 +45,6 @@ export const HomeRestaurants = () => {
     const onScroll = async (event: any) => {
       const { scrollHeight, scrollTop, clientHeight }: ScrollingElement =
         event.target.scrollingElement;
-      console.log(
-        !!(!fetching && scrollHeight - scrollTop <= clientHeight * 1.5)
-      );
 
       if (!fetching && scrollHeight - scrollTop <= clientHeight * 1.5) {
         fetching = true;

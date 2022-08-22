@@ -4,7 +4,7 @@ export const ContainerInput = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 13px 20px;
   border: 1px solid ${(props) => props.theme.colors.lightMedium};
   border-radius: 8px;
