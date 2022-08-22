@@ -41,6 +41,10 @@ export const InputArea = styled.div`
 export const WrapperSearchLabel = styled.div`
   margin: 40px 0 30px 0;
 
+  img {
+    cursor: pointer;
+  }
+
   h5 {
     font-family: "Poppins";
     font-style: normal;
@@ -55,9 +59,6 @@ export const WrapperSearchLabel = styled.div`
 
   h2 {
     line-height: 140%;
-
     text-align: center;
-
-    /* color: ${(props) => props.theme.colors.lightDown}; */
   }
 `;

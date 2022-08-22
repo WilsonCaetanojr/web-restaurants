@@ -64,7 +64,6 @@ export const Goback = styled.div`
     width: 55px;
     margin-left: 15%;
     align-items: center;
-    cursor: pointer;
 
     label {
       margin-left: 15%;

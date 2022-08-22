@@ -15,7 +15,6 @@ export const CardStyled = styled.div<{ image: string }>`
   display: flex;
   align-items: flex-end;
 
-  transition: box;
   &:hover {
     cursor: pointer;
     transition: box-shadow 0.3s ease-in-out;
