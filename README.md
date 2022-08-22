@@ -8,12 +8,12 @@ Restaurant listing. The easiest way to choose the restaurant. Read restaurant de
 
 ### Architecture inspired by Atomic Design
 
-<img src="https://i.imgur.com/Gslhd3J.png.png" alt="web-restaurants" width="350"/>
+<img src="https://i.imgur.com/Gslhd3J.png.png" alt="web-restaurants" width="300"/>
 
 # 👀 Demo Website
 👉 https://web-restaurants.vercel.app/
 
- <img src="https://i.imgur.com/fbA88pu.png" alt="web-restaurants" width="650"/>
+ <img src="https://i.imgur.com/cKMFBeE.png" alt="web-restaurants" width="650"/>
 
 # :computer: Technologies
 The technologies used in the project:
