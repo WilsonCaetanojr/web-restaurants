@@ -104,6 +104,6 @@ export const BoderBottom = styled.div`
 
   div {
     position: absolute;
-    top: 60px;
+    top: 80px;
   }
 `;
