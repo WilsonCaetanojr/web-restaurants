@@ -6,7 +6,7 @@
 
 Restaurant listing. The easiest way to choose the restaurant. Read restaurant descriptions, place your order.
 
-# Architecture inspired by Atomic Design
+### Architecture inspired by Atomic Design
 
 <img src="https://i.imgur.com/Gslhd3J.png.png" alt="web-restaurants" width="350"/>
 
