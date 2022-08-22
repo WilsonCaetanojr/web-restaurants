@@ -19,7 +19,7 @@ export const InputSearch = ({ placeholder, value, setValue }: Props) => {
           placeholder={placeholder}
           value={value}
           onChange={(e) => setValue(e.target.value)}
-        ></input>
+        />
       </ContainerInput>
     </>
   );
